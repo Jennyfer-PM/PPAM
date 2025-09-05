@@ -6,7 +6,7 @@ class inicioPAM
     {
         System.out.println("\nREGLAMENTO POO\n");
         System.out.println("1.- Respeto \n2.- Importante participación activa en clase \n3.- No entregar trabajos incompletos");
-        System.out.println("4.- No se aplica examen fuera de tiempo \n 5.- Plagio de trabajos = 0 para todos");
+        System.out.println("4.- No se aplica examen fuera de tiempo \n5.- Plagio de trabajos = 0 para todos");
         System.out.println("6.- 3 faltas = Final del parcial \n7.- Calificación Máxima en el final 8");
     }
 
@@ -38,11 +38,13 @@ class inicioPAM
     }
 }
 
-public class Consuta_Informacion
+public class Consulta_Informacion
 {
     public static void main(String[] args)
     {
         Scanner teclado = new Scanner(System.in);
+
+        inicioPAM info = new inicioPAM();
 
         int opcion;
 
@@ -58,16 +60,16 @@ public class Consuta_Informacion
             switch (opcion) 
             {
                 case 1:
-                    inicioPAM.Reglamento();
+                    info.Reglamento();
                     break;
                 case 2:
-
+                    info.Lineamientos();
                     break;
                 case 3:
-
+                    info.Fechas();
                     break;
                 case 4:
-
+                    info.Porcentajes();
                     break;
                 case 5:
                     System.out.println("CONSULTA FINALIZADA");
