@@ -4,6 +4,14 @@ const personas = [
     {nombre: "María", edad: 28}
 ];
 
-const nombre = personas.find(persona => personas.nombre === "Luis");
+const nombre = personas.find(personas => personas.nombre === "Luis");
 
 console.log(nombre);
+
+personas.forEach(persona => {
+    console.log(persona.nombre + " " + persona.edad);
+})
+
+const suma = personas.map(personas => personas.edad).reduce((acumulador, edad) => acumulador + edad, 0);
+
+console.log(suma);
