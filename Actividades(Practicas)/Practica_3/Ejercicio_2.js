@@ -1,9 +1,18 @@
 function verificarUsuario(usuario){
-    return new promise ((resolve, rejected) => 
-    );
+    const promise = new Promise ((resolve, rejected) => {
+        if(usuario == "Admin"){
+            resolve ("Acceso aceptado");
+        } else {
+            rejected ("Acceso denegado")
+        }
+    });
+    return promise;
 }
 
-promise.then(res => console.log(res))
-promise.catch(err => console.error(err));
+verificarUsuario("admi")
+.then(res => console.log(res))
+.catch(err => console.error(err));
 
-verificarUsuario("admin")
+verificarUsuario("Jessie")
+.then(res => console.log(res))
+.catch(err => console.error(err));
