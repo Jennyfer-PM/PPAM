@@ -2,6 +2,8 @@ import { Text, StyleSheet, View, Button } from 'react-native'
 import React, { useState } from 'react'
 import BotonesScreen from './BotonesScreen';
 import ContadorScreen from './ContadorScreen';
+import ACtivityScreen from './ActivityScreen';
+import ActivityScreen from './ActivityScreen';
 
 export default function MenuScreen() {
   const [screen, setScreen] = useState('menu');
@@ -11,6 +13,8 @@ export default function MenuScreen() {
         return <ContadorScreen/>;
     case 'botones': 
         return <BotonesScreen/>;
+    case 'activity':
+        return <ActivityScreen/>
     case 'menu':
         default:
         return (
@@ -19,6 +23,7 @@ export default function MenuScreen() {
                 <View style={styles.botoncitos}>
                 <Button color='green' onPress={()=>setScreen('contador')} title='Practica Contador'></Button>
                 <Button color='purple' onPress={()=>setScreen('botones')} title='Practica Botones'></Button>
+                <Button color='purple' onPress={()=>setScreen('activity')} title='Practica ACtivityIndicator'></Button>
                 </View>
             </View>
     )
