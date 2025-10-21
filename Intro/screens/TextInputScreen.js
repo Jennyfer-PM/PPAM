@@ -8,19 +8,21 @@ export default function TextInputScreen(){
 
     const [numer, setNumer] = useState('');
 
+    const [clave, setClave] = useState('');
+
     const mostrarAlerta = () => {
-        if ((nombre.trim()==='') || (texto.trim()==='') || (numer.trim()==='')) {
+        if ((nombre.trim()==='') || (texto.trim()==='') || (numer.trim()==='') || (clave.trim()==='')) {
             if(Platform.OS === 'web') {
-                window.alert ('ERROR, porfavor ingresa tu nombre, un texto y un número');
+                window.alert ('ERROR, porfavor ingresa tu nombre, un texto, un número y una clave');
             } else {
-                Alert.alert ('ERROR, porfavor ingresa tu nombre, un texto y un número')
+                Alert.alert ('ERROR, porfavor ingresa tu nombre, un texto, un número y una clave')
             }
         }
         else {
             if (Platform.OS === 'web') {
-                window.alert(`Hola ${nombre} tu texto es ${texto} y tu número fav es ${numer}`);
+                window.alert(`Hola ${nombre}. Tu texto es: ${texto}. Tu número fav es ${numer}. Y tu clave es: ${clave}`);
             } else {
-                Alert.alert(`Hola ${nombre} tu texto es ${texto} y tu número fav es ${numer}`);
+                Alert.alert(`Hola ${nombre}. Tu texto es: ${texto}. Tu número fav es ${numer}. Y tu clave es: ${clave}`);
             }
         }
     }
@@ -53,6 +55,15 @@ export default function TextInputScreen(){
         onChangeText={setNumer}
         maxLength={50}
         inputMode='numeric'
+        />
+
+        <TextInput
+        style={styles.recuadro}
+        placeholder='Escribe tu clave:'
+        value = {clave}
+        onChangeText={setClave}
+        maxLength={50}
+        secureTextEntry={true}
         />
 
         <Button color='blue' title='Mostrar saludo' onPress={mostrarAlerta}/>
