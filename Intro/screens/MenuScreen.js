@@ -5,6 +5,8 @@ import ContadorScreen from './ContadorScreen';
 import ActivityScreen from './ActivityScreen';
 import TextInputScreen from './TextInputScreen';
 import ImgBackgSlapshScreen from './ImgBackgSlapshScreen';
+import Activi2Screen from './Activi2Screen';
+import RepasoScreen from './RepasoScreen';
 
 
 export default function MenuScreen() {
@@ -21,6 +23,10 @@ export default function MenuScreen() {
         return <TextInputScreen/>
     case 'image':
         return <ImgBackgSlapshScreen/>
+    case 'activi2':
+        return <Activi2Screen/>
+    case 'repaso':
+        return <RepasoScreen/>
     case 'menu':
         default:
         return (
@@ -30,6 +36,8 @@ export default function MenuScreen() {
                 <Button color='purple' onPress={()=>setScreen('contador')} title='Practica Contador'></Button>
                 <Button color='purple' onPress={()=>setScreen('botones')} title='Practica Botones'></Button>
                 <Button color='purple' onPress={()=>setScreen('input')} title='Practica Text Input'></Button>
+                <Button color='purple' onPress={()=>setScreen('repaso')} title='Practica de Repaso'></Button>
+                <Button color='purple' onPress={()=>setScreen('activi2')} title='Practica activi2'></Button>
                 <Button color='purple' onPress={()=>setScreen('image')} title='Practica ImageBackgroung & SlapshScreen'></Button>
                 <Button color='purple' onPress={()=>setScreen('activity')} title='Practica ACtivityIndicator'></Button>
                 </View>
