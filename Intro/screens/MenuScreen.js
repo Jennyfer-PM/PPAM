@@ -7,6 +7,7 @@ import TextInputScreen from './TextInputScreen';
 import ImgBackgSlapshScreen from './ImgBackgSlapshScreen';
 import Activi2Screen from './Activi2Screen';
 import RepasoScreen from './RepasoScreen';
+import ScrollScreen from './ScrollScreen';
 
 
 export default function MenuScreen() {
@@ -27,6 +28,8 @@ export default function MenuScreen() {
         return <Activi2Screen/>
     case 'repaso':
         return <RepasoScreen/>
+    case 'scroll':
+        return <ScrollScreen/>
     case 'menu':
         default:
         return (
@@ -36,6 +39,7 @@ export default function MenuScreen() {
                 <Button color='purple' onPress={()=>setScreen('contador')} title='Practica Contador'></Button>
                 <Button color='purple' onPress={()=>setScreen('botones')} title='Practica Botones'></Button>
                 <Button color='purple' onPress={()=>setScreen('input')} title='Practica Text Input'></Button>
+                <Button color='purple' onPress={()=>setScreen('scroll')} title='Practica de Scroll'></Button>
                 <Button color='purple' onPress={()=>setScreen('repaso')} title='Practica de Repaso'></Button>
                 <Button color='purple' onPress={()=>setScreen('activi2')} title='Practica activi2'></Button>
                 <Button color='purple' onPress={()=>setScreen('image')} title='Practica ImageBackgroung & SlapshScreen'></Button>
