@@ -4,6 +4,7 @@ import BotonesScreen from './BotonesScreen';
 import ContadorScreen from './ContadorScreen';
 import ActivityScreen from './ActivityScreen';
 import TextInputScreen from './TextInputScreen';
+import ListasScreen from './ListasScreen';
 import ImgBackgSlapshScreen from './ImgBackgSlapshScreen';
 import Activi2Screen from './Activi2Screen';
 import RepasoScreen from './RepasoScreen';
@@ -30,6 +31,8 @@ export default function MenuScreen() {
         return <RepasoScreen/>
     case 'scroll':
         return <ScrollScreen/>
+    case 'listas':
+        return <ListasScreen/>
     case 'menu':
         default:
         return (
@@ -40,6 +43,7 @@ export default function MenuScreen() {
                 <Button color='purple' onPress={()=>setScreen('botones')} title='Practica Botones'></Button>
                 <Button color='purple' onPress={()=>setScreen('input')} title='Practica Text Input'></Button>
                 <Button color='purple' onPress={()=>setScreen('scroll')} title='Practica de Scroll'></Button>
+                <Button color='purple' onPress={()=>setScreen('listas')} title='Practica de Listas'></Button>
                 <Button color='purple' onPress={()=>setScreen('repaso')} title='Practica de Repaso'></Button>
                 <Button color='purple' onPress={()=>setScreen('activi2')} title='Practica activi2'></Button>
                 <Button color='purple' onPress={()=>setScreen('image')} title='Practica ImageBackgroung & SlapshScreen'></Button>
@@ -69,7 +73,7 @@ const styles = StyleSheet.create({
 
   botoncitos:{
     marginTop:20,
-    flexDirection:'row',
+    flexDirection:'column',
     gap:20,
   },
 })
