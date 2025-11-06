@@ -36,8 +36,6 @@ export default function ImgBackgSlapshScreen({navigation}){
   );
 }
 
-const {width, height} = Dimensions.get('window');
-
 const styles = StyleSheet.create({
   background: {
     width: width,
