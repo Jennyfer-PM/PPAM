@@ -9,6 +9,7 @@ import ImgBackgSlapshScreen from './ImgBackgSlapshScreen';
 import Activi2Screen from './Activi2Screen';
 import RepasoScreen from './RepasoScreen';
 import ScrollScreen from './ScrollScreen';
+import ModalScreen from './ModalScreen';
 
 
 export default function MenuScreen() {
@@ -33,6 +34,8 @@ export default function MenuScreen() {
         return <ScrollScreen/>
     case 'listas':
         return <ListasScreen/>
+    case 'modal':
+        return <ModalScreen/>
     case 'menu':
         default:
         return (
@@ -48,6 +51,7 @@ export default function MenuScreen() {
                 <Button color='purple' onPress={()=>setScreen('activi2')} title='Practica activi2'></Button>
                 <Button color='purple' onPress={()=>setScreen('image')} title='Practica ImageBackgroung & SlapshScreen'></Button>
                 <Button color='purple' onPress={()=>setScreen('activity')} title='Practica ACtivityIndicator'></Button>
+                <Button color='purple' onPress={()=>setScreen('modal')} title='Practica Modal'></Button>
                 </View>
             </View>
     )
