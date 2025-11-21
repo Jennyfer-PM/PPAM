@@ -1,13 +1,9 @@
-import { Text, StyleSheet, View, Pressable } from 'react-native'
+import { Text, StyleSheet, View} from 'react-native'
 
-export default function Detalles({ navigation }){
+export default function Detalles({ }){
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Detalles usuario</Text>
-
-        <Pressable style={[styles.button, styles.buttonHome]} onPress={() => navigation.navigate('Home')}>
-            <Text style={styles.buttonText}>Volver a Home</Text>
-        </Pressable>
+        <Text style={styles.title}>Detalles del usuario</Text>
       </View>
     )
 }

@@ -1,10 +1,5 @@
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-import Detalles from './detalles'
-
-const Stack = createNativeStackNavigator();
 
 export default function Profile({navigation}) {
     return(
@@ -12,11 +7,10 @@ export default function Profile({navigation}) {
             <View style={styles.iconRow}>
                 <Ionicons name="person-outline" size={28} color="green" />
                 <Text style={styles.title}>Perfil de usuario</Text>
-            </View>
-        <Stack.Navigator>
-        <Stack.Screen name="Profile" component={Profile} />
-        <Stack.Screen name="Detalles" component={Detalles} />
-        </Stack.Navigator>     
+                <Pressable style={[styles.button, styles.buttonHome]} onPress={() => navigation.navigate('Detalles')}>
+                    <Text style={styles.buttonText}>Detalles del usuario</Text>
+                </Pressable>
+            </View> 
         </View>
     );
 }
